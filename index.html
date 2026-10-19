@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Learning | Online Courses</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">IL</span> I Learning</div>
+  <nav>
+    <a href="#courses" class="nav-link active">Courses</a>
+    <a href="#dashboard" class="nav-link">My Dashboard</a>
+  </nav>
+  <button id="loginBtn" class="btn primary">Login</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Learn Digital Skills Online</h1>
+    <p>Enroll in courses, complete lessons, take quizzes, and earn certificates.</p>
+    <a href="#courses" class="btn primary large">Browse Courses</a>
+  </section>
+
+  <section id="courses" class="section">
+    <h2>Available Courses</h2>
+    <div id="courseGrid" class="grid"></div>
+  </section>
+
+  <section id="dashboard" class="section hidden">
+    <h2>My Dashboard</h2>
+    <div id="enrolledCourses" class="grid"></div>
+  </section>
+
+  <section id="courseView" class="section hidden">
+    <button class="btn ghost" onclick="closeCourse()">← Back to Courses</button>
+    <div id="courseDetails"></div>
+  </section>
+</main>
+
+<div id="loginModal" class="modal hidden">
+  <div class="modal-card">
+    <h3>Login / Sign Up</h3>
+    <input id="studentName" placeholder="Enter your full name">
+    <input id="studentEmail" type="email" placeholder="Enter your email">
+    <button class="btn primary full" onclick="login()">Continue</button>
+    <button class="btn ghost full" onclick="closeLogin()">Cancel</button>
+    <p class="small">Demo version: Your progress is saved in this browser only.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© <span id="year"></span> I Learning — Cybaware Solutions</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
